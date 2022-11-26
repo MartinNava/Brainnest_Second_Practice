@@ -1,6 +1,7 @@
 /*Fonts*/
 
 @import url('https://fonts.googleapis.com/css?family=Century+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @font-face {
     font-family: 'Century Gothic';
@@ -15,29 +16,46 @@
 
 :root {
     --container-max-width: 100%;
+    --css-exercise-container-max-width: 100%;
     --col2-width: 100%;
     --col2-flex: 0 0 100%;
+    --col4-width: 100%;
+    --col4-flex: 0 0 100%;
 }
 
 /*Media Querys*/
 
+@media(min-width:720px) {
+    :root {
+        --col4-width: 50%;
+        --col4-flex: 0 0 50%;
+    }
+}
+
 @media(min-width: 960px) {
     :root {
         --container-max-width: 900px;
+        --css-exercise-container-max-width: 576px;
         --col2-width: 50%;
         --col2-flex: 0 0 50%;
+        --col4-width: 33.3333%;
+        --col4-flex: 0 0 33.3333%;
     }
 }
 
 @media(min-width: 1264px) {
     :root {
         --container-max-width: 1185px;
+        --css-exercise-container-max-width: 758px;
+        --col4-width: 25%;
+        --col4-flex: 0 0 25%;
     }
 }
 
 @media(min-width: 1904px) {
     :root {
         --container-max-width: 1785px;
+        --css-exercise-container-max-width: 1142px;
     }
 }
 
@@ -94,6 +112,15 @@
 .col-2 {
     flex: var(--col2-flex);
     max-width: var(--col2-width);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-4 {
+    flex: var(--col4-flex);
+    max-width: var(--col4-width);
     display: flex;
     text-align: center;
     justify-content: center;
@@ -251,4 +278,158 @@
 
 .slogan {
     border-bottom: 1px solid;
+}
+
+.mainCSSProject .container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.firstContainer {
+    background-color: #1f2937;
+}
+
+.firstContainer .col {
+    text-align: left;
+}
+
+.firstContainer .firstTitle {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.firstContainer .firstDescription {
+    font-size: 18px;
+    color: #e5e7eb;
+    text-align: left;
+    margin: 0;
+}
+
+.firstContainer .firstBtn {
+    color: white;
+    background-color: #3882f6;
+    box-shadow: none;
+    border: none;
+    padding: 5pt 20pt;
+    border-radius: 5pt;
+    margin-top: 5pt;
+    margin-bottom: 40pt;
+    text-align: left;
+}
+
+.firstContainer .imgPlaceholder {
+    color: white;
+    background-color: #454545;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondContainer .square {
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 3px solid #3882f6;
+    border-radius: 10pt;
+    margin: auto;
+}
+
+.secondContainer .imageDescription {
+    opacity: 0.6;
+    font-size: 10pt;
+    margin-bottom: 75pt;
+}
+
+.thirdContainer {
+    background-color: #e5e7eb;
+}
+
+.secondContainer .container,
+.thirdContainer .container {
+    max-width: var(--css-exercise-container-max-width);
+}
+
+.thirdContainer .col {
+    text-align: left;
+    padding: 45pt 0;
+}
+
+.thirdContainer .quote {
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1f2937;
+    margin-bottom: 0;
+}
+
+.thirdContainer .quoter {
+    text-align: right;
+    color: #1f2937;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.fourthContainer {
+    color: white;
+}
+
+.fourthContainer .floatElement {
+    background-color: #3882f6;
+    border-radius: 5pt;
+    margin: 40pt 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourthContainer .floatElement .floatElementDescription {
+    width: 66%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.fourthContainer .floatElement .floatElementDescription p {
+    margin: 0;
+    text-align: left;
+}
+
+.fourthContainer .callTitle {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.fourthContainer .callSubtitle {
+    font-size: 10pt;
+}
+
+.fourthContainer .fourthBtn {
+    color: white;
+    background-color: #3882f6;
+    box-shadow: none;
+    border: 1px solid white;
+    padding: 5pt 20pt;
+    border-radius: 5pt;
+    margin: 40pt 0 40pt;
+    text-align: left;
+}
+
+.copy {
+    text-align: center;
+    color: #e5e7eb;
+    margin: 15pt auto;
+}
+
+.headerLogo {
+    font-size: 24px;
+    font-weight: 500;
+    color: #f9faf8;
+}
+
+.headerTabs {
+    margin-right: 25pt;
+    color: white;
 }
